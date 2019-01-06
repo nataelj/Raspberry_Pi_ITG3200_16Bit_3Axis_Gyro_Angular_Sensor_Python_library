@@ -170,7 +170,7 @@ class ITG3200():
 	def read_gyro(self):
 		"""Read raw data from gyro and then scale it and return.
 		Data returned as a dictionary with keys x, y, and z and values in degrees/S."""
-		data=read_gyro_raw() # Read the raw values
+		data=self.read_gyro_raw() # Read the raw values
 
 		# Scale the values by the sensitivity
 		xGyro=data['x']/GYRO_SENSITIVITY
